@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Offset - Book Preview | Element United</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background-color: #000000;
+        }
+
+        header {
+            background: #2d2d2d;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #E8FF00;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #E8FF00;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: #E8FF00;
+            margin: 0;
+            letter-spacing: 0.1em;
+        }
+
+        .back-link {
+            color: #E8FF00;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+        }
+
+        .back-link:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid #333;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            color: #E8FF00;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #cccccc;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .intro-section {
+            margin-bottom: 4rem;
+            background: #1a1a1a;
+            padding: 3rem;
+            border-radius: 12px;
+            border-left: 4px solid #E8FF00;
+        }
+
+        .intro-section h2 {
+            font-size: 2rem;
+            color: #E8FF00;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-section p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: #E8FF00;
+            font-weight: 600;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #E8FF00;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: #cccccc;
+            font-size: 1rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.02);
+            border-color: #E8FF00;
+        }
+
+        .book-info {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 2px solid #E8FF00;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .book-info h2 {
+            font-size: 2.5rem;
+            color: #E8FF00;
+            margin-bottom: 1rem;
+        }
+
+        .book-info p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: #cccccc;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .intro-section {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <h1>ELEMENT UNITED</h1>
+                    <p>Trust as Infrastructure</p>
+                </div>
+            </div>
+            <a href="index.html" class="back-link">← Back to Main Site</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Everyday Offset</h1>
+        <p>A practical guide to sustainable living that saves you money while protecting the planet</p>
+    </div>
+
+    <div class="container">
+        <div class="intro-section">
+            <h2>About the Book</h2>
+            <p><span class="highlight">Everyday Offset</span> is a 220-page comprehensive guide that proves sustainability doesn't require sacrifice—it creates savings. Written by the Offset Team, this book combines environmental science with practical financial wisdom to show how small changes in daily routines can dramatically reduce both your carbon footprint and household expenses.</p>
+            <p>From bathroom habits to energy efficiency, transportation to food choices, each section provides actionable strategies backed by research and real-world cost savings. No guilt, no perfection required—just honest, transparent guidance for making better choices that benefit both your wallet and the planet.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <h3>220</h3>
+                <p>Pages of Practical Advice</p>
+            </div>
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>Actionable Tips</p>
+            </div>
+            <div class="stat-item">
+                <h3>$1000s</h3>
+                <p>Potential Annual Savings</p>
+            </div>
+        </div>
+
+        <div class="book-info">
+            <h2>Launching 2025</h2>
+            <p>Live lighter. Spend smarter. Make an impact.</p>
+            <p style="font-style: italic; font-size: 1rem; color: #cccccc; margin-top: 1.5rem;">True to our unmanifesto: not perfect, but transparent. Not finished, but evolving.</p>
+        </div>
+
+        <h2 style="font-size: 2.5rem; color: #E8FF00; margin-bottom: 2rem; border-bottom: 2px solid #333; padding-bottom: 1rem;">Book Preview</h2>
+        
+        <div class="gallery">
+            <img src="book-page-1.png" alt="Everyday Offset Book - Bathroom section showing sustainable hair care tips, dry shampoo benefits, and bar soap alternatives">
+            <img src="book-page-2.png" alt="Everyday Offset Book - Water conservation strategies including shower timers, low-flow fixtures, and dual-flush toilets with annual savings calculations">
+        </div>
+
+        <div class="intro-section" style="margin-top: 4rem;">
+            <h2>What You'll Learn</h2>
+            <p><strong>Bathroom & Personal Care:</strong> Reduce water usage, extend time between washes, switch to sustainable products, and save on heating and product costs.</p>
+            <p><strong>Energy Efficiency:</strong> Smart home strategies, appliance optimization, and behavioral changes that cut utility bills.</p>
+            <p><strong>Transportation:</strong> Cost-effective alternatives, maintenance tips, and planning strategies that reduce emissions.</p>
+            <p><strong>Food & Consumption:</strong> Reduce waste, make informed choices, and save money on groceries while eating better.</p>
+            <p><strong>And much more:</strong> Each section provides difficulty ratings, time commitments, and clear financial breakdowns so you can prioritize the changes that work for your life.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Element United. All rights reserved.</p>
+        <p><a href="https://www.elementunited.earth" style="color: #E8FF00; text-decoration: none;">elementunited.earth</a></p>
+    </footer>
+</body>
+</html>
